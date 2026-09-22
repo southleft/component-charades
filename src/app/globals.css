@@ -1,0 +1,302 @@
+@import "tailwindcss";
+
+/*
+  TypeSafe console register: light grey ground, white cards with hairline
+  borders, regular-weight grotesk for headings, mono for labels and data.
+  One functional accent (blue) and two semantic ones (green / red).
+*/
+:root {
+  --ground: #f3f3f1;
+  --surface: #ffffff;
+  --surface-2: #f8f8f6;
+  --line: #e3e3df;
+  --line-strong: #cfcfca;
+  --ink: #111111;
+  --ink-2: #55554f;
+  --ink-3: #8a8a83;
+  --blue: #2f5bea;
+  --green: #17a672;
+  --red: #d63b3b;
+  --amber: #d9880f;
+}
+
+@theme inline {
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-blue: var(--blue);
+  --color-green: var(--green);
+  --color-red: var(--red);
+  --color-amber: var(--amber);
+  --font-sans: var(--font-geist), "Inter", system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+html {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100svh;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+/* ---------- type ---------- */
+
+.h-display {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Small caps mono label: "INSTRUCTIONS", "OUTPUT", "DISTRIBUTION". */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.num {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  line-height: 0.9;
+}
+
+/* ---------- surfaces ---------- */
+
+.card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+/* Registration crosshairs on the four corners, as on the console's schematic. */
+.crosshair::before,
+.crosshair::after,
+.crosshair > .xh::before,
+.crosshair > .xh::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background:
+    linear-gradient(var(--line-strong), var(--line-strong)) center / 1px 100% no-repeat,
+    linear-gradient(var(--line-strong), var(--line-strong)) center / 100% 1px no-repeat;
+  pointer-events: none;
+}
+.crosshair::before {
+  top: -5px;
+  left: -5px;
+}
+.crosshair::after {
+  top: -5px;
+  right: -5px;
+}
+.crosshair > .xh::before {
+  bottom: -5px;
+  left: -5px;
+}
+.crosshair > .xh::after {
+  bottom: -5px;
+  right: -5px;
+}
+
+/* Faint dot grid, for empty states. */
+.dotgrid {
+  background-image: radial-gradient(var(--line-strong) 0.8px, transparent 0.9px);
+  background-size: 12px 12px;
+}
+
+/* Holographic sticker: the one decorative flourish, borrowed from the console art. */
+.holo {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.7), transparent 45%),
+    conic-gradient(from 200deg, #b7f0ff, #ffd6f5, #fff3b0, #c9ffd9, #d5d0ff, #b7f0ff);
+  filter: saturate(1.1);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+/* Outline chip in mono. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  white-space: nowrap;
+}
+.chip-fill {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--surface);
+}
+.chip-muted {
+  color: var(--ink-3);
+  border-style: dashed;
+}
+.chip-red {
+  border-color: var(--red);
+  color: var(--red);
+}
+.chip-green {
+  border-color: var(--green);
+  color: var(--green);
+}
+.chip-blue {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* Solid button, like "Playground →". */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 4px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--surface);
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+}
+.btn:hover:not(:disabled) {
+  background: #2a2a2a;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn-ghost {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+.btn-ghost:hover:not(:disabled) {
+  background: var(--surface-2);
+}
+
+/* Thin distribution bar. */
+.dist-track {
+  height: 2px;
+  background: var(--line);
+  position: relative;
+}
+.dist-fill {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  background: var(--ink);
+  transition: width 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Sidebar nav item. */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.88rem;
+  color: var(--ink-2);
+  width: 100%;
+  text-align: left;
+}
+.nav-item:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.nav-item[aria-pressed="true"] {
+  background: var(--ground);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* ---------- motion ---------- */
+
+.fade-in {
+  animation: fade-in 220ms ease-out both;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.blink {
+  animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.shake {
+  animation: shake 320ms ease-in-out both;
+}
+@keyframes shake {
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
+
+textarea {
+  field-sizing: fixed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dist-fill,
+  .btn {
+    transition: none;
+  }
+  .fade-in,
+  .blink,
+  .shake {
+    animation: none;
+  }
+}

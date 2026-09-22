@@ -1,0 +1,947 @@
+[
+  {
+    "id": "button",
+    "name": "Button",
+    "aliases": ["btn", "push button", "cta"],
+    "category": "actions",
+    "description": "A clickable control with a short label that triggers an action, such as submitting a form or saving changes."
+  },
+  {
+    "id": "icon_button",
+    "name": "Icon Button",
+    "aliases": ["icon-only button", "glyph button"],
+    "category": "actions",
+    "description": "A compact button showing only a symbol and no text label, usually square or circular, with a tooltip for meaning."
+  },
+  {
+    "id": "button_group",
+    "name": "Button Group",
+    "aliases": ["segmented button", "action group", "button bar"],
+    "category": "actions",
+    "description": "Several related buttons joined edge to edge in a single row so they read as one control."
+  },
+  {
+    "id": "split_button",
+    "name": "Split Button",
+    "aliases": ["dropdown button", "menu button"],
+    "category": "actions",
+    "description": "A button with a main action on the left and a small attached arrow on the right that opens a menu of alternative actions."
+  },
+  {
+    "id": "fab",
+    "name": "Floating Action Button",
+    "aliases": ["fab", "floating button", "speed dial"],
+    "category": "actions",
+    "description": "A round, elevated button that floats above the page content in a corner and represents the single most important action on the screen."
+  },
+  {
+    "id": "link",
+    "name": "Link",
+    "aliases": ["anchor", "hyperlink", "text link"],
+    "category": "actions",
+    "description": "Inline text, often underlined or colored, that navigates to another page or location when clicked."
+  },
+  {
+    "id": "toggle_button",
+    "name": "Toggle Button",
+    "aliases": ["toggle", "pressed button", "state button"],
+    "category": "actions",
+    "description": "A button that stays pressed in or pops back out to represent an on or off state, like bold in a text editor."
+  },
+  {
+    "id": "copy_button",
+    "name": "Copy Button",
+    "aliases": ["clipboard button", "copy to clipboard"],
+    "category": "actions",
+    "description": "A small button beside a code snippet or value that copies it to the clipboard and briefly confirms with a checkmark."
+  },
+  {
+    "id": "text_input",
+    "name": "Text Input",
+    "aliases": ["text field", "input", "textbox", "text box", "input field"],
+    "category": "inputs",
+    "description": "A single-line box where a person types a short piece of text, with a label and optional placeholder."
+  },
+  {
+    "id": "textarea",
+    "name": "Textarea",
+    "aliases": ["text area", "multiline input", "multi-line text field"],
+    "category": "inputs",
+    "description": "A multi-line box for typing longer text such as a comment or message, often resizable by dragging the corner."
+  },
+  {
+    "id": "password_input",
+    "name": "Password Input",
+    "aliases": ["password field", "secret input"],
+    "category": "inputs",
+    "description": "A text field that masks characters as dots and offers an eye icon to reveal what was typed."
+  },
+  {
+    "id": "search_input",
+    "name": "Search Input",
+    "aliases": ["search field", "search bar", "search box"],
+    "category": "inputs",
+    "description": "A text field with a magnifying-glass icon for typing a query, often with a clear button and live suggestions."
+  },
+  {
+    "id": "number_input",
+    "name": "Number Input",
+    "aliases": ["numeric input", "spinbutton", "spin button", "number field"],
+    "category": "inputs",
+    "description": "A field that accepts only numbers, with small up and down arrows to increment or decrement the value."
+  },
+  {
+    "id": "stepper",
+    "name": "Stepper",
+    "aliases": ["quantity stepper", "plus minus", "counter", "increment stepper"],
+    "category": "inputs",
+    "description": "A minus button, a number, and a plus button in a row for adjusting a quantity like items in a cart."
+  },
+  {
+    "id": "pin_input",
+    "name": "PIN Input",
+    "aliases": ["otp input", "one-time code input", "verification code input", "code input"],
+    "category": "inputs",
+    "description": "A row of small single-character boxes for entering a short verification code, moving focus forward automatically as you type."
+  },
+  {
+    "id": "date_picker",
+    "name": "Date Picker",
+    "aliases": ["calendar picker", "date input", "datepicker"],
+    "category": "inputs",
+    "description": "A field that opens a calendar grid so a person can pick a specific day."
+  },
+  {
+    "id": "date_range_picker",
+    "name": "Date Range Picker",
+    "aliases": ["range calendar", "date range"],
+    "category": "inputs",
+    "description": "A calendar for selecting a start day and an end day, highlighting every day in between."
+  },
+  {
+    "id": "time_picker",
+    "name": "Time Picker",
+    "aliases": ["time input", "clock picker"],
+    "category": "inputs",
+    "description": "A control for choosing hours and minutes, either from scrolling columns or a clock face."
+  },
+  {
+    "id": "calendar",
+    "name": "Calendar",
+    "aliases": ["month grid", "month view"],
+    "category": "inputs",
+    "description": "A standalone month grid of days with arrows to move between months, shown inline rather than inside a popup."
+  },
+  {
+    "id": "color_picker",
+    "name": "Color Picker",
+    "aliases": ["color input", "colour picker", "eyedropper"],
+    "category": "inputs",
+    "description": "A control with a hue slider and a saturation square for choosing a color, often showing a hex value."
+  },
+  {
+    "id": "file_upload",
+    "name": "File Upload",
+    "aliases": ["file input", "dropzone", "drop zone", "file picker", "uploader"],
+    "category": "inputs",
+    "description": "A dashed-outline area where files can be dragged and dropped or browsed for, showing upload progress afterwards."
+  },
+  {
+    "id": "slider",
+    "name": "Slider",
+    "aliases": ["range slider", "range input", "track slider"],
+    "category": "inputs",
+    "description": "A horizontal track with a draggable handle for choosing a value within a range, like volume or brightness."
+  },
+  {
+    "id": "range_slider",
+    "name": "Range Slider",
+    "aliases": ["dual slider", "min max slider", "double slider"],
+    "category": "inputs",
+    "description": "A slider with two handles that selects a minimum and a maximum, such as a price range filter."
+  },
+  {
+    "id": "rating",
+    "name": "Rating",
+    "aliases": ["star rating", "stars", "rating stars"],
+    "category": "inputs",
+    "description": "A row of five stars that a person can click to rate something, filling in from the left."
+  },
+  {
+    "id": "rich_text_editor",
+    "name": "Rich Text Editor",
+    "aliases": ["wysiwyg", "editor", "text editor", "wysiwyg editor"],
+    "category": "inputs",
+    "description": "A large editing area with a formatting toolbar for bold, italics, lists, and links, for writing styled content."
+  },
+  {
+    "id": "code_editor",
+    "name": "Code Editor",
+    "aliases": ["code input", "monaco", "source editor"],
+    "category": "inputs",
+    "description": "A monospaced editing area with line numbers and syntax coloring for writing source code."
+  },
+  {
+    "id": "tag_input",
+    "name": "Tag Input",
+    "aliases": ["chips input", "token input", "multi-value input", "tokenfield"],
+    "category": "inputs",
+    "description": "A field where typed values turn into small removable pills, used for adding multiple tags or email recipients."
+  },
+  {
+    "id": "signature_pad",
+    "name": "Signature Pad",
+    "aliases": ["signature input", "drawing pad"],
+    "category": "inputs",
+    "description": "A blank canvas area where a person draws their signature with a finger or mouse."
+  },
+  {
+    "id": "checkbox",
+    "name": "Checkbox",
+    "aliases": ["check box", "tick box", "checkmark box"],
+    "category": "selection",
+    "description": "A small square that shows a checkmark when selected, allowing any number of options in a list to be chosen."
+  },
+  {
+    "id": "radio_button",
+    "name": "Radio Button",
+    "aliases": ["radio", "radio group", "option button"],
+    "category": "selection",
+    "description": "A small circle that fills with a dot when selected, where choosing one option in the group deselects the others."
+  },
+  {
+    "id": "switch",
+    "name": "Switch",
+    "aliases": ["toggle switch", "on off switch", "toggle"],
+    "category": "selection",
+    "description": "A pill-shaped control with a sliding knob that flips between on and off and takes effect immediately."
+  },
+  {
+    "id": "select",
+    "name": "Select",
+    "aliases": ["dropdown", "drop-down", "picker", "select menu", "listbox"],
+    "category": "selection",
+    "description": "A field showing the current choice with a downward arrow that opens a list of options to pick exactly one."
+  },
+  {
+    "id": "multi_select",
+    "name": "Multi Select",
+    "aliases": ["multiselect", "multiple select", "multi-select dropdown"],
+    "category": "selection",
+    "description": "A dropdown that allows choosing several options at once, showing the selections as checkmarks or pills in the field."
+  },
+  {
+    "id": "combobox",
+    "name": "Combobox",
+    "aliases": ["combo box", "autocomplete", "typeahead", "autosuggest"],
+    "category": "selection",
+    "description": "A text field combined with a dropdown list that filters its options as you type and lets you pick one."
+  },
+  {
+    "id": "segmented_control",
+    "name": "Segmented Control",
+    "aliases": ["segmented button", "toggle group", "button toggle", "choice chips"],
+    "category": "selection",
+    "description": "A horizontal bar divided into two to five equal segments where exactly one is highlighted, used to switch between views."
+  },
+  {
+    "id": "chip",
+    "name": "Chip",
+    "aliases": ["pill", "filter chip", "token", "choice chip"],
+    "category": "selection",
+    "description": "A small rounded pill of text that can be selected, toggled, or dismissed, often used for filters or tags."
+  },
+  {
+    "id": "transfer_list",
+    "name": "Transfer List",
+    "aliases": ["dual listbox", "shuttle", "pick list"],
+    "category": "selection",
+    "description": "Two side-by-side lists with arrow buttons between them for moving items from an available column to a selected column."
+  },
+  {
+    "id": "tree_select",
+    "name": "Tree Select",
+    "aliases": ["hierarchical select", "cascader", "nested select"],
+    "category": "selection",
+    "description": "A dropdown whose options are nested in expandable parent-child branches, for choosing from a hierarchy."
+  },
+  {
+    "id": "navbar",
+    "name": "Navbar",
+    "aliases": ["navigation bar", "top bar", "header", "app bar", "top nav", "site header"],
+    "category": "navigation",
+    "description": "A horizontal bar across the top of the page with the logo, main navigation links, and account controls."
+  },
+  {
+    "id": "sidebar",
+    "name": "Sidebar",
+    "aliases": ["side nav", "side navigation", "navigation rail", "left nav", "drawer nav", "vertical nav"],
+    "category": "navigation",
+    "description": "A vertical column along the left edge holding the main navigation links, often collapsible to icons only."
+  },
+  {
+    "id": "tabs",
+    "name": "Tabs",
+    "aliases": ["tab bar", "tab list", "tabbed navigation", "tab panel"],
+    "category": "navigation",
+    "description": "A row of labeled headings where clicking one shows its panel of content and hides the others, with an underline on the active one."
+  },
+  {
+    "id": "breadcrumb",
+    "name": "Breadcrumb",
+    "aliases": ["breadcrumbs", "breadcrumb trail", "crumbs"],
+    "category": "navigation",
+    "description": "A horizontal trail of links separated by slashes or chevrons showing the path from the home page to the current page."
+  },
+  {
+    "id": "pagination",
+    "name": "Pagination",
+    "aliases": ["pager", "page navigation", "page numbers"],
+    "category": "navigation",
+    "description": "A row of page numbers with previous and next arrows for moving through a long list split into pages."
+  },
+  {
+    "id": "menu",
+    "name": "Menu",
+    "aliases": ["dropdown menu", "context menu", "action menu", "overflow menu", "kebab menu"],
+    "category": "navigation",
+    "description": "A floating vertical list of actions or options that appears when a trigger is clicked and disappears on selection."
+  },
+  {
+    "id": "menu_bar",
+    "name": "Menu Bar",
+    "aliases": ["menubar", "application menu"],
+    "category": "navigation",
+    "description": "A horizontal strip of top-level menu labels like File, Edit, and View, each opening a dropdown when clicked."
+  },
+  {
+    "id": "command_palette",
+    "name": "Command Palette",
+    "aliases": ["command menu", "cmd+k", "command k", "quick switcher", "omnibar", "spotlight"],
+    "category": "navigation",
+    "description": "A centered search box summoned by a keyboard shortcut that lists every command and page and filters as you type."
+  },
+  {
+    "id": "bottom_navigation",
+    "name": "Bottom Navigation",
+    "aliases": ["tab bar", "bottom tabs", "bottom bar", "mobile nav"],
+    "category": "navigation",
+    "description": "A bar fixed to the bottom of a phone screen with three to five icons and labels for switching between top-level sections."
+  },
+  {
+    "id": "stepper_nav",
+    "name": "Progress Steps",
+    "aliases": ["wizard", "step indicator", "steps", "progress stepper", "multi-step indicator"],
+    "category": "navigation",
+    "description": "A row of numbered circles connected by lines showing which stage of a multi-step process a person is on."
+  },
+  {
+    "id": "anchor_links",
+    "name": "Table of Contents",
+    "aliases": ["anchor nav", "on this page", "in-page navigation", "toc", "scrollspy"],
+    "category": "navigation",
+    "description": "A sticky list of section headings beside a long article that highlights the section currently in view."
+  },
+  {
+    "id": "back_to_top",
+    "name": "Back to Top",
+    "aliases": ["scroll to top", "return to top"],
+    "category": "navigation",
+    "description": "A small floating button with an upward arrow that appears after scrolling down and jumps back to the top of the page."
+  },
+  {
+    "id": "skip_link",
+    "name": "Skip Link",
+    "aliases": ["skip to content", "skip navigation"],
+    "category": "navigation",
+    "description": "A hidden link that appears only when focused by keyboard and jumps past the header straight to the main content."
+  },
+  {
+    "id": "footer",
+    "name": "Footer",
+    "aliases": ["site footer", "page footer"],
+    "category": "navigation",
+    "description": "The band at the very bottom of every page with secondary links, legal text, and a copyright line."
+  },
+  {
+    "id": "toast",
+    "name": "Toast",
+    "aliases": ["notification toast", "toast message", "snack", "growl"],
+    "category": "feedback",
+    "description": "A small message that slides in at a corner or edge of the screen, confirms something happened, and disappears on its own after a few seconds."
+  },
+  {
+    "id": "snackbar",
+    "name": "Snackbar",
+    "aliases": ["snack bar"],
+    "category": "feedback",
+    "description": "A brief dark bar at the bottom center of the screen with a short message and a single action like Undo, dismissing itself automatically."
+  },
+  {
+    "id": "banner",
+    "name": "Banner",
+    "aliases": ["announcement bar", "system banner", "notification bar", "global alert"],
+    "category": "feedback",
+    "description": "A full-width strip at the top of the page carrying a persistent site-wide message, staying until dismissed."
+  },
+  {
+    "id": "alert",
+    "name": "Alert",
+    "aliases": ["inline alert", "callout", "notice", "message box", "inline message", "admonition"],
+    "category": "feedback",
+    "description": "A colored box placed inline within the content, with an icon and text, that flags information, success, warning, or an error and stays put."
+  },
+  {
+    "id": "progress_bar",
+    "name": "Progress Bar",
+    "aliases": ["progress indicator", "loading bar", "linear progress", "determinate progress"],
+    "category": "feedback",
+    "description": "A horizontal track that fills from left to right to show how much of a task has completed."
+  },
+  {
+    "id": "spinner",
+    "name": "Spinner",
+    "aliases": ["loading spinner", "loader", "circular progress", "activity indicator", "loading indicator"],
+    "category": "feedback",
+    "description": "A small rotating circle that indicates something is loading when the wait time is unknown."
+  },
+  {
+    "id": "skeleton",
+    "name": "Skeleton",
+    "aliases": ["skeleton loader", "placeholder loader", "shimmer", "ghost loader", "content placeholder"],
+    "category": "feedback",
+    "description": "Grey shimmering blocks shaped like the text and images that are about to load, holding their place on the page."
+  },
+  {
+    "id": "empty_state",
+    "name": "Empty State",
+    "aliases": ["blank slate", "zero state", "no results", "empty view"],
+    "category": "feedback",
+    "description": "A friendly illustration and short message shown in place of a list that has nothing in it yet, often with a button to add the first item."
+  },
+  {
+    "id": "error_page",
+    "name": "Error Page",
+    "aliases": ["404 page", "not found page", "500 page", "error screen"],
+    "category": "feedback",
+    "description": "A full page shown when something goes wrong or a page does not exist, with a large error code and a way back home."
+  },
+  {
+    "id": "badge",
+    "name": "Badge",
+    "aliases": ["notification badge", "count badge", "dot badge", "status dot"],
+    "category": "feedback",
+    "description": "A tiny red circle with a number pinned to the corner of an icon to show how many unread items there are."
+  },
+  {
+    "id": "tag",
+    "name": "Tag",
+    "aliases": ["label", "status tag", "lozenge", "status pill"],
+    "category": "feedback",
+    "description": "A small rectangular colored label with short text that categorizes an item or shows its status, not interactive."
+  },
+  {
+    "id": "status_indicator",
+    "name": "Status Indicator",
+    "aliases": ["status dot", "presence indicator", "online dot", "health dot"],
+    "category": "feedback",
+    "description": "A small colored dot, green or red or yellow, next to a name or service showing whether it is online, busy, or down."
+  },
+  {
+    "id": "inline_validation",
+    "name": "Inline Validation",
+    "aliases": ["field error", "error message", "helper text", "validation message", "form error"],
+    "category": "feedback",
+    "description": "Red text and a red border that appear directly beneath a form field the moment its value is invalid."
+  },
+  {
+    "id": "confirmation_dialog",
+    "name": "Confirmation Dialog",
+    "aliases": ["confirm dialog", "are you sure", "destructive dialog", "confirm modal"],
+    "category": "overlays",
+    "description": "A small centered dialog asking whether you are sure before a destructive action, with a red confirm button and a cancel button."
+  },
+  {
+    "id": "modal",
+    "name": "Modal",
+    "aliases": ["dialog", "modal dialog", "lightbox", "pop-up", "popup"],
+    "category": "overlays",
+    "description": "A window that appears centered over a dimmed page and blocks interaction with everything behind it until closed."
+  },
+  {
+    "id": "drawer",
+    "name": "Drawer",
+    "aliases": ["side panel", "slide-over", "sheet", "side sheet", "offcanvas", "flyout panel"],
+    "category": "overlays",
+    "description": "A panel that slides in from the side edge of the screen over the page and slides back out when dismissed."
+  },
+  {
+    "id": "bottom_sheet",
+    "name": "Bottom Sheet",
+    "aliases": ["action sheet", "bottom drawer", "sheet"],
+    "category": "overlays",
+    "description": "A panel that slides up from the bottom of a phone screen, can be dragged taller, and shows options or details."
+  },
+  {
+    "id": "popover",
+    "name": "Popover",
+    "aliases": ["popup", "flyout", "overlay panel", "dropdown panel"],
+    "category": "overlays",
+    "description": "A small floating card anchored to the element that opened it, holding rich content or controls, closed by clicking outside."
+  },
+  {
+    "id": "tooltip",
+    "name": "Tooltip",
+    "aliases": ["hint", "hover tip", "infotip", "title tip"],
+    "category": "overlays",
+    "description": "A tiny dark label with a short explanation that appears when you hover over or focus an element and vanishes when you move away."
+  },
+  {
+    "id": "hover_card",
+    "name": "Hover Card",
+    "aliases": ["profile card", "preview card", "peek card"],
+    "category": "overlays",
+    "description": "A richer card with an avatar, name, and details that appears when hovering over a username or link."
+  },
+  {
+    "id": "dropdown_panel",
+    "name": "Mega Menu",
+    "aliases": ["megamenu", "mega dropdown", "navigation panel"],
+    "category": "overlays",
+    "description": "A very wide panel that drops down from a top navigation item, laying out many links in multiple columns with headings."
+  },
+  {
+    "id": "lightbox",
+    "name": "Lightbox",
+    "aliases": ["image viewer", "gallery viewer", "media modal"],
+    "category": "overlays",
+    "description": "A full-screen dark overlay that shows a single enlarged image with arrows to move to the next and previous ones."
+  },
+  {
+    "id": "coach_mark",
+    "name": "Coach Mark",
+    "aliases": ["onboarding tooltip", "feature tour", "product tour", "walkthrough", "spotlight tour", "hotspot"],
+    "category": "overlays",
+    "description": "A highlighted circle around a new feature with an attached callout explaining it, part of a step-by-step first-run tour."
+  },
+  {
+    "id": "cookie_consent",
+    "name": "Cookie Consent",
+    "aliases": ["cookie banner", "consent banner", "gdpr banner", "privacy notice"],
+    "category": "overlays",
+    "description": "A bar or card that appears on first visit asking you to accept or manage cookies before it goes away."
+  },
+  {
+    "id": "card",
+    "name": "Card",
+    "aliases": ["tile", "panel", "content card"],
+    "category": "layout",
+    "description": "A rectangular container with rounded corners and a subtle shadow that groups an image, title, text, and actions about one thing."
+  },
+  {
+    "id": "accordion",
+    "name": "Accordion",
+    "aliases": ["expansion panel", "collapse", "collapsible", "disclosure group", "expander"],
+    "category": "layout",
+    "description": "A vertical stack of headings that each expand to reveal their content when clicked and collapse when clicked again, often used for FAQs."
+  },
+  {
+    "id": "disclosure",
+    "name": "Disclosure",
+    "aliases": ["show more", "details summary", "expandable section", "collapsible section"],
+    "category": "layout",
+    "description": "A single line with a small triangle or 'show more' text that reveals hidden content beneath it when toggled."
+  },
+  {
+    "id": "divider",
+    "name": "Divider",
+    "aliases": ["separator", "rule", "hr", "horizontal rule"],
+    "category": "layout",
+    "description": "A thin horizontal or vertical line that visually separates two groups of content."
+  },
+  {
+    "id": "grid",
+    "name": "Grid",
+    "aliases": ["layout grid", "column grid", "12-column grid"],
+    "category": "layout",
+    "description": "An invisible system of equal columns and gutters that aligns page content into a consistent layout."
+  },
+  {
+    "id": "stack",
+    "name": "Stack",
+    "aliases": ["vstack", "hstack", "flex stack", "spacing stack"],
+    "category": "layout",
+    "description": "A layout helper that arranges its children in a row or column with equal spacing between each one."
+  },
+  {
+    "id": "container",
+    "name": "Container",
+    "aliases": ["wrapper", "page container", "content width"],
+    "category": "layout",
+    "description": "A centered wrapper that limits content to a maximum width and adds side padding so lines do not stretch across a wide screen."
+  },
+  {
+    "id": "split_pane",
+    "name": "Split Pane",
+    "aliases": ["resizable panels", "splitter", "resizable layout", "pane divider"],
+    "category": "layout",
+    "description": "Two side-by-side panels with a draggable bar between them that resizes how much space each one gets."
+  },
+  {
+    "id": "masonry",
+    "name": "Masonry",
+    "aliases": ["masonry grid", "pinterest layout", "staggered grid"],
+    "category": "layout",
+    "description": "A layout of cards with varying heights packed into columns so there are no gaps, like a Pinterest board."
+  },
+  {
+    "id": "hero",
+    "name": "Hero",
+    "aliases": ["hero section", "jumbotron", "hero banner", "masthead"],
+    "category": "layout",
+    "description": "The large full-width section at the top of a landing page with a giant headline, a subtitle, and a prominent call-to-action button."
+  },
+  {
+    "id": "sticky_header",
+    "name": "Sticky Header",
+    "aliases": ["fixed header", "pinned header", "sticky nav"],
+    "category": "layout",
+    "description": "A header that stays fixed to the top of the viewport while the rest of the page scrolls beneath it."
+  },
+  {
+    "id": "aspect_ratio",
+    "name": "Aspect Ratio Box",
+    "aliases": ["ratio box", "aspect ratio container"],
+    "category": "layout",
+    "description": "A wrapper that keeps its content at a fixed width-to-height proportion, like 16:9, as it resizes."
+  },
+  {
+    "id": "table",
+    "name": "Table",
+    "aliases": ["data table", "datagrid", "data grid", "grid view"],
+    "category": "data-display",
+    "description": "Rows and columns of data with a header row, often sortable by clicking a column heading and with selectable rows."
+  },
+  {
+    "id": "list",
+    "name": "List",
+    "aliases": ["list view", "list item", "item list"],
+    "category": "data-display",
+    "description": "A vertical sequence of similar items, each on its own row, sometimes with an icon on the left and an action on the right."
+  },
+  {
+    "id": "description_list",
+    "name": "Description List",
+    "aliases": ["key value list", "definition list", "property list", "detail list"],
+    "category": "data-display",
+    "description": "Pairs of labels and values laid out in two columns for showing details about a single record."
+  },
+  {
+    "id": "tree_view",
+    "name": "Tree View",
+    "aliases": ["tree", "file tree", "hierarchy view", "outline view"],
+    "category": "data-display",
+    "description": "Nested items with small arrows that expand and collapse child items, like a file explorer showing folders."
+  },
+  {
+    "id": "timeline",
+    "name": "Timeline",
+    "aliases": ["activity feed", "history", "event timeline", "changelog"],
+    "category": "data-display",
+    "description": "A vertical line with dots marking events in chronological order, each with a date and a short description."
+  },
+  {
+    "id": "kanban_board",
+    "name": "Kanban Board",
+    "aliases": ["board view", "kanban", "task board", "trello board"],
+    "category": "data-display",
+    "description": "Several vertical columns like To Do, Doing, and Done with cards that can be dragged between them."
+  },
+  {
+    "id": "stat",
+    "name": "Stat",
+    "aliases": ["kpi card", "metric card", "statistic", "number tile", "big number"],
+    "category": "data-display",
+    "description": "A very large number with a small label underneath and a green or red arrow showing change from the previous period."
+  },
+  {
+    "id": "chart",
+    "name": "Chart",
+    "aliases": ["graph", "bar chart", "line chart", "pie chart", "data visualization"],
+    "category": "data-display",
+    "description": "A visual plot of data such as bars, lines, or slices with axes and a legend."
+  },
+  {
+    "id": "sparkline",
+    "name": "Sparkline",
+    "aliases": ["mini chart", "inline chart", "trend line"],
+    "category": "data-display",
+    "description": "A tiny line chart with no axes or labels, squeezed into a table cell or beside a number to show a trend."
+  },
+  {
+    "id": "avatar",
+    "name": "Avatar",
+    "aliases": ["profile picture", "user image", "profile photo", "user icon"],
+    "category": "data-display",
+    "description": "A small circle showing a person's photo or their initials on a colored background."
+  },
+  {
+    "id": "avatar_group",
+    "name": "Avatar Group",
+    "aliases": ["avatar stack", "facepile", "face pile", "stacked avatars"],
+    "category": "data-display",
+    "description": "Several overlapping profile circles in a row with a final '+5' circle showing how many more people there are."
+  },
+  {
+    "id": "code_block",
+    "name": "Code Block",
+    "aliases": ["code snippet", "pre", "syntax highlight", "code sample"],
+    "category": "data-display",
+    "description": "A dark or grey box of monospaced text showing formatted source code, often with syntax colors and a copy button."
+  },
+  {
+    "id": "keyboard_key",
+    "name": "Keyboard Key",
+    "aliases": ["kbd", "key cap", "shortcut hint", "keycap"],
+    "category": "data-display",
+    "description": "A tiny bordered box that looks like a physical keyboard key, used to show a shortcut such as Ctrl and K."
+  },
+  {
+    "id": "blockquote",
+    "name": "Blockquote",
+    "aliases": ["quote", "pull quote", "testimonial"],
+    "category": "data-display",
+    "description": "An indented passage of quoted text with a thick vertical bar on the left or large quotation marks."
+  },
+  {
+    "id": "carousel",
+    "name": "Carousel",
+    "aliases": ["slider", "slideshow", "image slider", "gallery slider", "swiper"],
+    "category": "media",
+    "description": "A horizontal strip of images or cards that you swipe or click arrows to move through, with dots showing your position."
+  },
+  {
+    "id": "image",
+    "name": "Image",
+    "aliases": ["picture", "img", "responsive image", "figure"],
+    "category": "media",
+    "description": "A photo or illustration displayed on the page, with alternative text and optionally a caption beneath it."
+  },
+  {
+    "id": "video_player",
+    "name": "Video Player",
+    "aliases": ["media player", "player", "video embed"],
+    "category": "media",
+    "description": "A rectangle that plays moving pictures with a play button, a scrubbing bar, a volume control, and a fullscreen toggle."
+  },
+  {
+    "id": "audio_player",
+    "name": "Audio Player",
+    "aliases": ["music player", "podcast player", "sound player"],
+    "category": "media",
+    "description": "A compact bar with a play button, a progress track, and a timestamp for listening to a sound recording."
+  },
+  {
+    "id": "map",
+    "name": "Map",
+    "aliases": ["map embed", "interactive map", "location map"],
+    "category": "media",
+    "description": "An interactive geographic map with pins marking locations that can be zoomed and dragged."
+  },
+  {
+    "id": "icon",
+    "name": "Icon",
+    "aliases": ["glyph", "symbol", "svg icon", "pictogram"],
+    "category": "media",
+    "description": "A small simple symbol, like a gear or a trash can, that represents an object or action without words."
+  },
+  {
+    "id": "logo",
+    "name": "Logo",
+    "aliases": ["brand mark", "wordmark", "brand logo"],
+    "category": "media",
+    "description": "The brand's mark or name displayed in the top left of the header that links back to the home page."
+  },
+  {
+    "id": "heading",
+    "name": "Heading",
+    "aliases": ["title", "h1", "headline", "display text"],
+    "category": "typography",
+    "description": "Large bold text that titles a page or section and creates a hierarchy from most to least important."
+  },
+  {
+    "id": "paragraph",
+    "name": "Paragraph",
+    "aliases": ["body text", "text", "copy", "body copy"],
+    "category": "typography",
+    "description": "A block of ordinary reading text at the standard size, the default body content of a page."
+  },
+  {
+    "id": "caption",
+    "name": "Caption",
+    "aliases": ["small text", "fine print", "help text", "footnote"],
+    "category": "typography",
+    "description": "Small, muted text beneath an image or field that adds a short explanation or credit."
+  },
+  {
+    "id": "truncated_text",
+    "name": "Truncated Text",
+    "aliases": ["ellipsis text", "line clamp", "overflow text", "read more"],
+    "category": "typography",
+    "description": "Text cut off with three dots when it runs out of room, sometimes with a link to expand it fully."
+  },
+  {
+    "id": "form",
+    "name": "Form",
+    "aliases": ["form layout", "form group", "fieldset"],
+    "category": "utility",
+    "description": "A vertical arrangement of labeled fields ending in a submit button for collecting information from a person."
+  },
+  {
+    "id": "field_label",
+    "name": "Label",
+    "aliases": ["field label", "form label", "input label"],
+    "category": "utility",
+    "description": "The short text placed above or beside a form field naming what should be entered, often with a red asterisk if required."
+  },
+  {
+    "id": "toolbar",
+    "name": "Toolbar",
+    "aliases": ["action bar", "tool bar", "formatting bar"],
+    "category": "utility",
+    "description": "A horizontal strip of icon buttons and small controls grouped together above a document or table, like a text editor's formatting row."
+  },
+  {
+    "id": "filter_bar",
+    "name": "Filter Bar",
+    "aliases": ["filters", "faceted filters", "filter panel", "facets"],
+    "category": "utility",
+    "description": "A row or side panel of dropdowns and checkboxes that narrows down a list of results, showing the active filters as removable pills."
+  },
+  {
+    "id": "sort_control",
+    "name": "Sort Control",
+    "aliases": ["sort dropdown", "sort by", "sort menu"],
+    "category": "utility",
+    "description": "A small dropdown labelled 'Sort by' that changes the order of a list, such as newest first or price low to high."
+  },
+  {
+    "id": "search_results",
+    "name": "Search Results",
+    "aliases": ["results list", "result list", "search page"],
+    "category": "utility",
+    "description": "The list of matching items shown after a search, each with a highlighted title, a snippet, and a count of total matches at the top."
+  },
+  {
+    "id": "notification_center",
+    "name": "Notification Center",
+    "aliases": ["inbox", "notification panel", "activity panel", "bell menu"],
+    "category": "utility",
+    "description": "A panel opened from a bell icon listing recent notifications with unread ones highlighted and a mark-all-read button."
+  },
+  {
+    "id": "user_menu",
+    "name": "User Menu",
+    "aliases": ["account menu", "profile menu", "avatar menu", "account dropdown"],
+    "category": "utility",
+    "description": "A dropdown opened by clicking your avatar in the header, with links to profile, settings, and a sign-out action."
+  },
+  {
+    "id": "theme_toggle",
+    "name": "Theme Toggle",
+    "aliases": ["dark mode toggle", "dark mode switch", "color scheme toggle", "light dark switch"],
+    "category": "utility",
+    "description": "A sun and moon control that switches the whole interface between light mode and dark mode."
+  },
+  {
+    "id": "language_selector",
+    "name": "Language Selector",
+    "aliases": ["locale picker", "language switcher", "country selector", "region picker"],
+    "category": "utility",
+    "description": "A dropdown, often with a globe or flag icon, for switching the interface to a different language or region."
+  },
+  {
+    "id": "pricing_table",
+    "name": "Pricing Table",
+    "aliases": ["pricing cards", "plan comparison", "pricing plans", "tier cards"],
+    "category": "utility",
+    "description": "Side-by-side columns for plan tiers like Free, Pro, and Enterprise, each with a price, a feature checklist, and a sign-up button."
+  },
+  {
+    "id": "login_form",
+    "name": "Login Form",
+    "aliases": ["sign in form", "auth form", "login screen", "sign-in"],
+    "category": "utility",
+    "description": "A compact centered form with an email field, a password field, a forgot-password link, and a sign-in button."
+  },
+  {
+    "id": "autosave_indicator",
+    "name": "Autosave Indicator",
+    "aliases": ["saving status", "saved indicator", "save state", "sync status"],
+    "category": "utility",
+    "description": "Tiny text near a document title that quietly cycles between 'Saving…' and 'Saved' as changes are stored automatically."
+  },
+  {
+    "id": "keyboard_shortcuts_dialog",
+    "name": "Keyboard Shortcuts Dialog",
+    "aliases": ["shortcuts cheat sheet", "hotkeys dialog", "shortcut help"],
+    "category": "utility",
+    "description": "A dialog opened by pressing the question-mark key that lists every keyboard shortcut in the app in neat columns."
+  },
+  {
+    "id": "infinite_scroll",
+    "name": "Infinite Scroll",
+    "aliases": ["endless scroll", "load more", "lazy list", "auto load"],
+    "category": "utility",
+    "description": "A list that automatically loads and appends more items as you reach the bottom, with no page numbers."
+  },
+  {
+    "id": "drag_handle",
+    "name": "Drag Handle",
+    "aliases": ["grip", "grabber", "reorder handle", "grip dots"],
+    "category": "utility",
+    "description": "A small grip of six dots or two lines on the edge of an item that you grab to drag and reorder it in a list."
+  },
+  {
+    "id": "resize_handle",
+    "name": "Resize Handle",
+    "aliases": ["resizer", "corner grip", "resize grip"],
+    "category": "utility",
+    "description": "A small diagonal-lines grip in the bottom-right corner of a box that you drag to change its size."
+  },
+  {
+    "id": "scrollbar",
+    "name": "Scrollbar",
+    "aliases": ["scroll bar", "custom scrollbar", "scroll area"],
+    "category": "utility",
+    "description": "A thin track along the edge of a scrolling area with a thumb that shows position and can be dragged to move through content."
+  },
+  {
+    "id": "focus_ring",
+    "name": "Focus Ring",
+    "aliases": ["focus outline", "focus indicator", "focus state"],
+    "category": "utility",
+    "description": "A visible colored outline that appears around whichever element currently has keyboard focus."
+  },
+  {
+    "id": "visually_hidden",
+    "name": "Visually Hidden",
+    "aliases": ["sr-only", "screen reader only", "assistive text"],
+    "category": "utility",
+    "description": "Text that is invisible on screen but still read aloud by screen readers to describe something for people who cannot see it."
+  },
+  {
+    "id": "live_region",
+    "name": "Live Region",
+    "aliases": ["aria-live", "status region", "announcer"],
+    "category": "utility",
+    "description": "An invisible area whose text changes are announced automatically by screen readers, used to speak status updates."
+  },
+  {
+    "id": "portal",
+    "name": "Portal",
+    "aliases": ["teleport", "overlay root", "render outside"],
+    "category": "utility",
+    "description": "A developer helper that renders a piece of the interface at the end of the document body so overlays escape clipping and stacking issues."
+  }
+]
