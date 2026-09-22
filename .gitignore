@@ -42,3 +42,9 @@ next-env.d.ts
 
 # allow the example env file to be committed
 !.env.example
+
+# cloudflare / opennext
+.open-next
+.wrangler
+.dev.vars
+cloudflare-env.d.ts

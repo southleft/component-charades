@@ -22,6 +22,21 @@ npm run dev
 
 Without a key (or with `JEV_MODE=fixtures`), the app runs against a keyword-overlap stand-in so you can work on the UI at zero spend. The footer marginalia reports `source: fixtures` so you can never mistake it for the model.
 
+## Deploying
+
+Live at [component-charades.southleft-llc.workers.dev](https://component-charades.southleft-llc.workers.dev).
+
+Cloudflare Pages' Next.js adapter does not support Next 15+, so this uses the [OpenNext Cloudflare adapter](https://opennext.js.org/cloudflare) and deploys to a Worker with static assets. Wrangler needs Node 22+.
+
+```bash
+npm run preview                       # build and run the worker locally
+npm run deploy                        # build and deploy
+npx wrangler secret put TYPESAFE_API_KEY   # once, per environment
+npx wrangler secret put ROUND_SECRET       # once; any random string (openssl rand -hex 32)
+```
+
+Config lives in `wrangler.jsonc` and `open-next.config.ts`. No R2 bucket is needed: the page is static and the API routes are dynamic, so there is nothing to cache incrementally.
+
 ## Why Jev, and not a chat model
 
 Jev is a System One model. It does not generate text. It takes a `state` and a map of typed questions and returns typed answers with calibrated probabilities, all questions evaluated in parallel in one request. Three primitives only:
