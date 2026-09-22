@@ -12,10 +12,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const TITLE = "Component Charades";
+const DESCRIPTION =
+  "A Taboo-style game for design systems. Describe a UI component without naming it, and watch Jev, a model that only ever answers with odds, bet on every guess.";
+
 export const metadata: Metadata = {
-  title: "Component Charades",
-  description:
-    "A parlour game for design systems. Describe a UI component without naming it, and watch Jev put odds on every guess.",
+  metadataBase: new URL("https://component-charades.vercel.app"),
+  title: TITLE,
+  description: DESCRIPTION,
+  applicationName: TITLE,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/",
+    siteName: TITLE,
+    type: "website",
+    // opengraph-image.png in this directory is picked up automatically.
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
