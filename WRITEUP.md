@@ -1,6 +1,6 @@
 # Component Charades, and what Jev actually is
 
-**Play it:** https://component-charades.southleft-llc.workers.dev
+**Play it:** https://component-charades.vercel.app
 **Code:** https://github.com/southleft/component-charades
 
 ## The short version
@@ -79,6 +79,6 @@ Per request: about 5,500 input tokens, about $0.00023, 150–400 ms warm. The ev
 
 ## Who built what
 
-The catalog of 135 components, their descriptions and aliases, every question and threshold, all the interface copy, and the game rules were written by people. The code is Next.js, deployed to Cloudflare Workers. Jev's only job is to receive a description and return probabilities. If it ever seems to "know" what a Skeleton loader is, that is because a human wrote a one-line description of one into the catalog and Jev matched your words to it.
+The catalog of 135 components, their descriptions and aliases, every question and threshold, all the interface copy, and the game rules were written by people. The code is Next.js, deployed on Vercel. Jev's only job is to receive a description and return probabilities. If it ever seems to "know" what a Skeleton loader is, that is because a human wrote a one-line description of one into the catalog and Jev matched your words to it.
 
 That division of labor is the argument for Jev. Code owns the workflow. A person owns the vocabulary. The model does the one thing the other two cannot: read a sentence and say, with a number attached, which of 135 things it most resembles.

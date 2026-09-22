@@ -24,18 +24,18 @@ Without a key (or with `JEV_MODE=fixtures`), the app runs against a keyword-over
 
 ## Deploying
 
-Live at [component-charades.southleft-llc.workers.dev](https://component-charades.southleft-llc.workers.dev).
+Live at [component-charades.vercel.app](https://component-charades.vercel.app).
 
-Cloudflare Pages' Next.js adapter does not support Next 15+, so this uses the [OpenNext Cloudflare adapter](https://opennext.js.org/cloudflare) and deploys to a Worker with static assets. Wrangler needs Node 22+.
+The Vercel project (`southleft/component-charades`) is connected to this GitHub repo, so every push to `main` deploys. Two environment variables are set there for Production and Preview:
 
-```bash
-npm run preview                       # build and run the worker locally
-npm run deploy                        # build and deploy
-npx wrangler secret put TYPESAFE_API_KEY   # once, per environment
-npx wrangler secret put ROUND_SECRET       # once; any random string (openssl rand -hex 32)
-```
+- `TYPESAFE_API_KEY`: the Jev key.
+- `ROUND_SECRET`: any random string (`openssl rand -hex 32`), used to sign round tokens. Without it the app falls back to deriving one from the API key, which works but couples the two.
 
-Config lives in `wrangler.jsonc` and `open-next.config.ts`. No R2 bucket is needed: the page is static and the API routes are dynamic, so there is nothing to cache incrementally.
+Manage from the CLI with `vercel env ls`, `vercel env add`, and `vercel ls` after `vercel link --scope southleft --project component-charades`.
+
+### Cloudflare Workers (alternative)
+
+The repo also carries an [OpenNext Cloudflare](https://opennext.js.org/cloudflare) config (`wrangler.jsonc`, `open-next.config.ts`) and deploys to a Worker with `npm run deploy` (Wrangler needs Node 22+; set the same two values with `wrangler secret put`). A copy runs at [component-charades.southleft-llc.workers.dev](https://component-charades.southleft-llc.workers.dev). Cloudflare Pages' own Next.js adapter does not support Next 15+, which is why the adapter is needed.
 
 ## Why Jev, and not a chat model
 
